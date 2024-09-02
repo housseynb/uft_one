@@ -1,15 +1,10 @@
-﻿' Récupérer le nombre de lignes dans la DataTable globale
-rowCount = DataTable.GetRowCount
+﻿'Variables
+Dim nav, pageJPet
 
-' Boucle à travers chaque ligne de la DataTable
-For i = 1 To rowCount
-    ' Sélectionner la ligne actuelle
-    DataTable.SetCurrentRow(i)
-    
-    ' Récupérer la valeur de la colonne "Animals"
-    animalType = DataTable.Value("Animals", dtGlobalSheet)
+'Set des objets
+Set nav = Browser("JPetStore Demo")
+Set pageJPet = Page("JPetStore Demo")
     
     ' Appliquer la valeur dans le champ de recherche et cliquer sur le bouton
-    Browser("JPetStore Demo").Page("JPetStore Demo").WebEdit("keyword").Set animalType
-    Browser("JPetStore Demo").Page("JPetStore Demo").WebButton("Search").Click
-Next
+    nav.pageJPet.WebEdit("keyword").Set Parameter("VALEUR_RECHERCHE")
+    nav.pageJPet.WebButton("Search").Click
