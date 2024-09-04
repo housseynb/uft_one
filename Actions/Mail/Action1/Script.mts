@@ -4,7 +4,7 @@ Dim adresseEmail, objetEmail, corpsEmail
 ' Assigner des valeurs aux variables
 adresseEmail = "houssuft@gmail.com"
 objetEmail = "Test mail"
-corpsEmail = "ceci est un mail pour moi meme"
+corpsEmail = "Xavier is great than Mister J"
 
 ' Accéder à Gmail
 Wait(5) ' Attendre que la page est complètement chargée
