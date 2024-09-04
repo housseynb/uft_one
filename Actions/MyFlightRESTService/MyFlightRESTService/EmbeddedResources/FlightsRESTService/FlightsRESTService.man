@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>88813e7d-7e16-4b8d-a080-f0da625ebbc2</ID>
+  <Name>FlightsRESTService</Name>
+  <Type>REST</Type>
+  <Version>2</Version>
+  <CreationDate>2024-09-04T14:31:09.0547689+02:00</CreationDate>
+  <UpdateDate>2024-09-04T15:01:24.05675+02:00</UpdateDate>
+  <LoaderID>SignatureResourceHandler</LoaderID>
+  <MetaDataSignatureFile>162a5852-5ef5-462e-a54c-ed3cba2eeff9.xml</MetaDataSignatureFile>
+  <TestResourceId>162a5852-5ef5-462e-a54c-ed3cba2eeff9</TestResourceId>
+  <RepositoryType>TestRepository</RepositoryType>
+  <SignatureCodonId>HP.ST.RestDesignTime.RestServicesV2</SignatureCodonId>
+  <SignatureAddinVersion>2024.2.0.185</SignatureAddinVersion>
+  <Properties>
+    <Item>
+      <Key>
+        <string>RepositoryPath</string>
+      </Key>
+      <Value>
+        <string>C:\Users\hboudjenane\Desktop\git_one\Actions\MyFlightRESTService\MyFlightRESTService\EmbeddedResources</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>ResourceOrigin</string>
+      </Key>
+      <Value>
+        <string>C:\Users\hboudjenane\Desktop\git_one\Actions\MyFlightRESTService\MyFlightRESTService\EmbeddedResources\FlightsRESTService</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>PrototypeDbVersion</string>
+      </Key>
+      <Value>
+        <string>2024.2.0.185</string>
+      </Value>
+    </Item>
+  </Properties>
+</ResourceManifest>
