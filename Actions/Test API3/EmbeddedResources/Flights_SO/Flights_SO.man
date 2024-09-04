@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ResourceManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ID>11c9cfb1-4169-4743-9606-8078476cee37</ID>
+  <Name>Flights_SO</Name>
+  <Type>WSDL</Type>
+  <Version>1</Version>
+  <CreationDate>2024-09-04T16:32:24.6364799+02:00</CreationDate>
+  <UpdateDate>2024-09-04T16:32:24.6364799+02:00</UpdateDate>
+  <LoaderID>SignatureResourceHandler</LoaderID>
+  <MetaDataSignatureFile>ff225b91-3fc8-48ab-a9bc-c18b2e8c7eb2.xml</MetaDataSignatureFile>
+  <TestResourceId>ff225b91-3fc8-48ab-a9bc-c18b2e8c7eb2</TestResourceId>
+  <RepositoryType>TestRepository</RepositoryType>
+  <SignatureCodonId>HP.ST.WebServiceWsdl</SignatureCodonId>
+  <SignatureAddinVersion>2024.2.0.185</SignatureAddinVersion>
+  <Properties>
+    <Item>
+      <Key>
+        <string>RepositoryPath</string>
+      </Key>
+      <Value>
+        <string>C:\Users\hboudjenane\Desktop\git_one\Actions\Test API3\EmbeddedResources</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>ResourceOrigin</string>
+      </Key>
+      <Value>
+        <string>C:\Users\hboudjenane\Desktop\git_one\Actions\Test API3\EmbeddedResources\Flights_SO</string>
+      </Value>
+    </Item>
+    <Item>
+      <Key>
+        <string>PrototypeDbVersion</string>
+      </Key>
+      <Value>
+        <string>2024.2.0.185</string>
+      </Value>
+    </Item>
+  </Properties>
+</ResourceManifest>
