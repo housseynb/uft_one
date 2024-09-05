@@ -12,8 +12,9 @@ DevelopTool=AQT
 
 [Actions]
 Action0=Action0\Script.mts
-Action=Action1\Script.mts
-ActionRe=Action2\Script.mts
+Rechercher=Action1\Script.mts
+Naviguer [rechercheJPetStore]=Action2\Script.mts
+recherche [rechercheJPetStore]=Action1\Script.mts
 
 [VuserProfiles]
 Profiles=Default Profile
