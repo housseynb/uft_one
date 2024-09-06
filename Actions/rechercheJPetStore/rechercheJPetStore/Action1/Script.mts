@@ -7,12 +7,12 @@ Dim maxLignes, compteur
 ' Initialisation d'Excel
 Set XLHandle = CreateObject("Excel.Application")
 XLHandle.DisplayAlerts = False
-Set XLBook = XLHandle.WorkBooks.Open("C:\Users\hboudjenane\Desktop\git_one\Ressources\Animals.xlsx")
+Set XLBook = XLHandle.WorkBooks.Open("C:\Users\hboudjenane\Desktop\git_one\Ressources\xxx.xlsx")
 Set InSheet = XLBook.Worksheets("Animals")
 
 ' Initialisation du navigateur et de la page
 Set browserObj = Browser("JPetStore Demo")
-Set pageObj = browserObj.Page("JPetStore Demo")
+Set pageObj = browserObj.Page("Home")
 
 ' Définir la limite de lignes
 maxLignes = 100
