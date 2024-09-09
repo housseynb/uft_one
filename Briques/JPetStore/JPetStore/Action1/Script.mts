@@ -2,7 +2,7 @@
 Dim browserObj, pageObj
 Dim elementAnimal, resultAnimal
 Dim XLHandle, XLBook, InSheet, numLigne, valeurRecherche
-Dim maxLignes, compteur
+Dim LastRow
 
 ' Initialisation d'Excel
 Set XLHandle = CreateObject("Excel.Application")
@@ -10,17 +10,15 @@ XLHandle.DisplayAlerts = False
 Set XLBook = XLHandle.WorkBooks.Open("C:\Users\hboudjenane\Desktop\git_one\Ressources\JPetSore\xxx.xlsx")
 Set InSheet = XLBook.Worksheets("Animals")
 
+' Récupérer le dernier numéro de ligne contenant des données
+LastRow = InSheet.UsedRange.Columns(1).Rows.Count
+
 ' Initialisation du navigateur et de la page
 Set browserObj = Browser("JPetStore Demo")
 Set pageObj = browserObj.Page("Home")
 
-' Définir la limite de lignes
-maxLignes = 100
-compteur = 0
-
 ' Boucle sur les lignes de la colonne A
-numLigne = 1
-Do While InSheet.Cells(numLigne, 1).Value <> "" And compteur < maxLignes
+For numLigne = 1 To LastRow
 
     ' Récupérer la valeur de la colonne A
     valeurRecherche = InSheet.Cells(numLigne, 1).Value
@@ -32,7 +30,7 @@ Do While InSheet.Cells(numLigne, 1).Value <> "" And compteur < maxLignes
 
     ' Modifier et attendre l'élément
     pageObj.WebElement("Animals").SetTOProperty "innertext", valeurRecherche
-    
+
     ' Utiliser la procédure SynchroniserVisibilite
     SynchroniserVisibilite pageObj.WebElement("Animals"), 5
 
@@ -50,11 +48,7 @@ Do While InSheet.Cells(numLigne, 1).Value <> "" And compteur < maxLignes
         Reporter.ReportEvent micFail, "Test Status", "Le test pour " & valeurRecherche & " est KO"
     End If
 
-    ' Incrémenter la ligne et le compteur
-    numLigne = numLigne + 1
-    compteur = compteur + 1
-
-Loop
+Next
 
 ' Libération des objets Excel
 XLBook.Close False
