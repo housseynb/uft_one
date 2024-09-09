@@ -5,7 +5,8 @@ Set Buy = browserObj.Page("Buy")
 
 ' Déclaration des variables
 Dim prixInitial, prixTotalMiseAJour, prixTotalConfirme
-Dim quantite, prixUnitaire, montantAttendu, valeur
+Dim quantite, montantAttendu
+Dim valeur
 
 ' Actions à exécuter
 home.Image("fish").Click
@@ -14,11 +15,11 @@ home.Link("AddCart").Click
 
 ' Récupérer le prix initial
 SynchroniserVisibilite Buy.WebElement("Total Cost"), 5
-prixInitial = Buy.WebElement("Total Cost").GetROProperty("InnerText")
-prixInitial = CDbl(Replace(prixInitial, "$", "")) ' Convertir le prix en nombre
+valeur = Buy.WebElement("Total Cost").GetROProperty("InnerText")
+prixInitial = ExtraireValeur(valeur) ' Convertir la valeur récupérée
 
 ' Définir la quantité souhaitée
-quantite = 3
+quantite = 3 ' Modifier cette valeur selon le besoin
 
 ' Mettre à jour la quantité et le panier
 Buy.WebEdit("Quantity").Set quantite
@@ -26,8 +27,8 @@ Buy.WebButton("UpdateCart").Click
 
 ' Récupérer le prix après mise à jour
 SynchroniserVisibilite Buy.WebElement("Total Cost"), 5
-prixTotalMiseAJour = Buy.WebElement("Total Cost").GetROProperty("InnerText")
-prixTotalMiseAJour = CDbl(Replace(prixTotalMiseAJour, "$", "")) ' Convertir le prix en nombre
+valeur = Buy.WebElement("Total Cost").GetROProperty("InnerText")
+prixTotalMiseAJour = ExtraireValeur(valeur) ' Convertir la valeur récupérée
 
 ' Calculer le montant attendu
 montantAttendu = prixInitial * quantite
@@ -46,8 +47,8 @@ Buy.Link("Confirm").Click
 
 ' Récupérer le prix confirmé
 SynchroniserVisibilite Buy.WebElement("ConfirmTotal"), 5
-prixTotalConfirme = Buy.WebElement("ConfirmTotal").GetROProperty("InnerText")
-prixTotalConfirme = CDbl(Replace(prixTotalConfirme, "$", "")) ' Convertir le prix en nombre
+valeur = Buy.WebElement("ConfirmTotal").GetROProperty("InnerText")
+prixTotalConfirme = ExtraireValeur(valeur) ' Convertir la valeur récupérée
 
 ' Vérifier que le prix confirmé est correct
 If prixTotalConfirme = montantAttendu Then
@@ -60,3 +61,4 @@ End If
 Set browserObj = Nothing
 Set home = Nothing
 Set Buy = Nothing
+
