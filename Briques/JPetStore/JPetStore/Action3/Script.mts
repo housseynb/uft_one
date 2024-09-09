@@ -3,17 +3,14 @@ Set browserObj = Browser("JPetStore Demo")
 Set home = browserObj.Page("Home")
 Set login = browserObj.Page("Login")
 
-' Définition des variables utilisateur et mot de passe
-Dim username, password
-username = "j2ee"
-password = "j2ee"
-
 ' Cliquer sur le lien "Sign In"
 home.Link("Sign In").Click
 
 ' Saisie des identifiants
-login.WebEdit("username").Set username
-login.WebEdit("password").Set password
+login.WebEdit("username").Set Parameter("user")  ' Utilisation du paramètre user
+
+' Utilisation de SetSecure pour le mot de passe
+login.WebEdit("password").SetSecure Parameter("password")  ' Utilisation sécurisée du paramètre password
 
 ' Cliquer sur le bouton "Login"
 login.WebButton("Login").Click
@@ -31,4 +28,3 @@ If resultatVerification = "OK" Then
 Else
     Reporter.ReportEvent micFail, "Test de connexion", "Le test de connexion a échoué"
 End If
-
